@@ -1,0 +1,6 @@
+fileignoreconfig:
+- filename: src/main/resources/data.sql
+  checksum: 4fcc706cc8d117d04d135883e837504e33c27d4018c91c8c2db4b4c8bc92f2ab
+- filename: src/main/resources/db/migration/V1.1__BOOK_SCHEMA.sql
+  checksum: 5b37933b3c2caaf873cc37ea4119ee7c0cf3b8196d196540fd900c13b67aa239
+version: ""

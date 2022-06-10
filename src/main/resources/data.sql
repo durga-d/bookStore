@@ -1,0 +1,1 @@
+INSERT INTO BOOK VALUES (random_uuid(), 'Ponniyin', 'Historic novel', 1957)
