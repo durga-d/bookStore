@@ -1,11 +1,17 @@
 package com.example.bookStore.model;
 
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.UUID;
 
+@Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
 
     @Id
@@ -23,4 +29,5 @@ public class Book {
     @Column
     @NotNull
     private int releaseYear;
+
 }
