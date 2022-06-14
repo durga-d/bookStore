@@ -1,0 +1,1 @@
+INSERT INTO BOOK VALUES (random_uuid(), 'test title', 'test novel', 8765)
