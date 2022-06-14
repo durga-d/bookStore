@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -21,10 +22,14 @@ public class BookService {
         this.modelMapper = mapper;
     }
 
-    public List<BookDto> getBooks() {
+    public List<BookDto> getBookDtos() {
         Iterable<Book> all = bookRepository.findAll();
         return StreamSupport.stream(all.spliterator(),false)
-                .map(book -> modelMapper.map(book, BookDto.class))
+                .map(convertBookToBookDto())
                 .collect(Collectors.toList());
+    }
+
+    private Function<Book, BookDto> convertBookToBookDto() {
+        return book -> modelMapper.map(book, BookDto.class);
     }
 }

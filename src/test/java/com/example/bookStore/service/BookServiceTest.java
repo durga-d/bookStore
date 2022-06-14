@@ -40,7 +40,7 @@ public class BookServiceTest {
         when(bookRepository.findAll()).thenReturn(books);
         BookDto bookDto = new BookDto(UUID.randomUUID(), "Kanni theevu", "Crime", 1987);
         when(mapper.map(book, BookDto.class)).thenReturn(bookDto);
-        List<BookDto> bookDtos = bookService.getBooks();
+        List<BookDto> bookDtos = bookService.getBookDtos();
         assertThat(bookDtos.size(), is(equalTo(1)));
         assertThat(bookDtos.get(0))
                 .isNotNull()
